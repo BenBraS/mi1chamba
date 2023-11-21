@@ -1,0 +1,42 @@
+* {
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body{ 
+    min-height: 100vh;
+    background-image: url(../Images/BACKGROUND\ INDEX.jpg);
+    background-size: 100% 100%;
+    margin: 0px;
+}
+
+.container{ 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+.contenido{ 
+display: flex;
+flex-direction:column ;
+justify-content: center;
+color: aliceblue;
+font-style: italic;
+
+}
+.tituloindex{ 
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    color: aliceblue;
+    font-style: italic;
+    font-size: 20px;
+    font
+    
+    }
