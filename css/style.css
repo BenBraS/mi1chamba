@@ -1,42 +1,382 @@
-* {
-    margin:0 ;
-    padding: 0;
-    box-sizing: border-box;
+
+.landpage__inicio {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". Header Header Header Header ."
+      ". Welcome Welcome Welcome Welcome ."
+      ". Welcome Welcome Welcome Welcome ."
+      ". . Tienda Tienda . .";
+      min-height: 100vh;
+      
+      background-image: url(../Images/imagenfondo.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color:aliceblue
 }
-
-
-
-
-
-body{ 
-    min-height: 100vh;
-    background-image: url(../Images/BACKGROUND\ INDEX.jpg);
-    background-size: 100% 100%;
-    margin: 0px;
+#main {
+  min-height: 100vh;
 }
-
-.container{ 
-    height: 100vh;
+#header{ grid-area: Header; 
     display: flex;
     justify-content: center;
-
-
-}
-.contenido{ 
-display: flex;
-flex-direction:column ;
-justify-content: center;
-color: aliceblue;
-font-style: italic;
-
-}
-.tituloindex{ 
-    display: flex;
-    flex-direction:column ;
-    justify-content: center;
-    color: aliceblue;
-    font-style: italic;
-    font-size: 20px;
-   
+    align-items: flex-end;
+    position: sticky;
+    padding-top: 5vw;
     
+
+}
+
+/*============PROPIEDADES DEL NAV============*/
+
+#navBar ul li a {
+    font-size: 2vw;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+ 
+}
+
+#navBar{
+  margin-right: 9vw;
+  margin-top: 5vw;
+
+}
+#navBar ul {
+    display: flex;
+    align-items: flex-end;
+    border: solid;
+    border-radius: 10px;
+    padding-right: 40px;
+}
+
+
+a , li {
+  display: inline-block;
+  font-style: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: indie flower;
+}
+
+/*================Propiedades Welcome to the best dried fruit Store========= */
+
+.Welcome { grid-area: Welcome; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-left: 10vw;
+margin-left: 4vw;
+margin-top: 5vw;
+font-family: indie Flower;
+}
+
+.Welcome h1{
+  font-size: 4vw;
+}
+
+
+/*==============Propiedades Tienda=============== */
+
+.boton__tienda { grid-area: Tienda;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 3vw;
+  border-radius: 10px;
+ 
+
+}
+
+.boton__tienda a {
+  border-radius: 10px;
+  color: aliceblue;
+
+}
+
+#body__contacto {
+  background-color:#454856;
+  min-height: 100vh;
+  display: flex;
+}
+#main__contacto{
+  min-height: 100vh;
+
+}
+
+
+
+/*    ==============  PÁGINA CONTACTO     ===================      */
+
+#header__contacto{ grid-area: Navbar; 
+  display: flex;
+  justify-content: center;
+  
+  position: absolute;
+  left: 20%;
+  top: 5%;
+  
+  
+
+}
+#main__contacto{
+  max-width: 1440px;
+}
+#navBar__contacto ul li a {
+  font-size: 2vw;
+  margin-left: 20px;
+  color: rgb(255, 255, 255);
+  
+  
+  
+  
+}
+
+
+#navBar__contacto ul {
+  display: flex;
+  height: 40px;
+  border: solid;
+  border-color: aliceblue;
+  border-radius: 15px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+
+
+
+
+#grid__contacto {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  gap: 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Navbar Navbar Navbar Navbar Navbar . ."
+    "titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto"
+    ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ."
+    ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ."
+    ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ."
+    ". . . . . . . .";
+    min-height: 100vh;
+    
+    
+}
+
+
+/*====================TITULO Y REDES **FALTA ICONO */
+.titulo_contacto { grid-area: titulo_contacto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  color: white;
+}
+.caja_contactos{
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(255, 255, 255);
+  position: relative;
+  right: 20%;
+  bottom: 20%;
+  font-size: 10px;
+}
+.caja_contactos h2{
+  font-size: 20px;
+}
+.linea_titulo{
+  width: 80%;
+  border: solid 3px rgb(255, 255, 255);
+  position: relative;
+  bottom: 20%;
+}
+/*FORMULARIO DE CONTACTO*/
+.form { grid-area: formulario_contacto;
+ background-color: #D9D9D9;
+ border: 2px solid rgb(0, 0, 0 / 30%);
+ border-radius: 20%;
+ text-align: center;
+ max-width: 490px;
+ overflow: auto;
+ padding: 1em 1em;
+}
+.form__container{
+  display: grid;
+  gap:2em;
+}
+.form__input{
+  width:95%;
+  min-width: 50%;
+}
+
+.form__submit{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left:10%;
+  background: #d9d9d9;
+  color: #fff;
+  max-width: 80%;
+}
+/*MAPA DE GOOGLE*/
+.mapa__google { grid-area: mapa__google;
+  padding-left: 3%;
+
+}
+.iframe__maps{
+  grid-area: mapa__google;
+border: 2px solid rgb(0, 0, 0 / 30%);
+ border-radius: 20%;
+ max-width: 100%;
+ 
+}
+#mensaje{
+  resize: none;
+}
+
+/*PAGINA TIENDA OK!!!!!!! */
+
+.container__tienda{
+
+background-color:#9C9BAA;
+ border-radius: 10px;
+ display: grid;
+ min-height: 100px;
+ min-width: 200px;
+ grid-template-columns: 50px, 1fr ;
+ grid-template-rows: 100px 40px ;
+ gap:2px; 
+ 
+
+}
+.container__tienda .div{
+  background-color: #9C9BAA;
+  color: white;
+  display: grid;
+  
+}
+
+.container__tienda .div:first-child{
+  background-color:#9C9BAA;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: stretch;
+  position: relative;
+  padding: 30px;
+  color: white;
+  bottom: 1px;
+
+}
+.container__tienda .div:nth-child(2){
+  grid-column-start:1 ;
+  grid-column-end: 2;
+  
+  
+  
+
+}
+.container__tienda .div:nth-child(3){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  
+}
+
+
+.box__productos{
+  display: grid;
+  background-color:#9C9BAA;
+  grid-template-columns: repeat( 3, 1fr);
+  padding: 10px;
+}
+.box__productos  {
+background-color: lightseagreen;
+border:1px solid black;
+
+}
+
+.producto1{
+  display: grid;
+  justify-items: center;
+  
+}
+.producto2{
+  display: grid;
+  justify-items: center;
+}
+.producto3{
+  display: grid;
+  justify-items: center;
+}
+.producto4{
+  display: grid;
+  justify-items: center;
+}
+.producto5{
+  display: grid;
+  justify-items: center;
+}
+.producto6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__productos{
+  width: 80%;
+  height: auto;
+}
+.contenedor__productos img{
+  width: 80%;
+    height: auto;
+    border-radius: 20px 20px 20px 20px;
+}
+#body__tienda{
+  background-color: #9C9BAA;
+}
+@media(max-width:768px) {
+  .box__productos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width:480px){
+    .box__productos{
+      grid-template-columns: repeat(1, 1fr);
     }
+  
+}
+
+/*PAGINA ACERCA DE O SOBRE NOSOTROS*/
+
+.contenido_sobrenosotros{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-top: 50px;
+
+}
+.contenido_sobrenosotros img{
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+}
+.imagen1{
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+@media(max-width:768px) {
+  .contenido_sobrenosotros{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+@media(max-width:480px){
+    .contenido_sobrenosotros{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+}
