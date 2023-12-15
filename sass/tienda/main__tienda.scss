@@ -1,0 +1,126 @@
+/*==============Propiedades Tienda=============== */
+
+.boton__tienda { grid-area: Tienda;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3vw;
+    border-radius: 10px;
+
+
+}
+
+.boton__tienda a {
+    border-radius: 10px;
+    color: aliceblue;
+
+}
+
+/*PAGINA TIENDA OK!!!!!!! */
+
+.container__tienda{
+  
+  background-color:#9C9BAA;
+   border-radius: 10px;
+   display: grid;
+   min-height: 100px;
+   min-width: 200px;
+   grid-template-columns: 50px, 1fr ;
+   grid-template-rows: 100px 40px ;
+   gap:2px; 
+
+
+}
+.container__tienda .div{
+    background-color: #9C9BAA;
+    color: white;
+    display: grid;
+    
+}
+
+.container__tienda .div:first-child{
+    background-color:#9C9BAA;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: stretch;
+    position: relative;
+    padding: 30px;
+    color: white;
+    bottom: 1px;
+
+}
+.container__tienda .div:nth-child(2){
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    
+}
+.container__tienda .div:nth-child(3){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
+
+.box__productos{
+    display: grid;
+    background-color:#9C9BAA;
+    grid-template-columns: repeat( 3, 1fr);
+    padding: 10px;
+}
+.box__productos  {
+  background-color: lightseagreen;
+  border:1px solid black;
+
+}
+
+.producto1{
+    display: grid;
+    justify-items: center;
+    
+}
+.producto2{
+    display: grid;
+    justify-items: center;
+}
+.producto3{
+    display: grid;
+    justify-items: center;
+}
+.producto4{
+    display: grid;
+    justify-items: center;
+}
+.producto5{
+    display: grid;
+    justify-items: center;
+}
+.producto6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__productos{
+    width: 80%;
+    height: auto;
+}
+.contenedor__productos img{
+    width: 80%;
+    height: auto;
+    border-radius: 20px 20px 20px 20px;
+  }
+#body__tienda{
+    background-color: #9C9BAA;
+}
+// SISTEMA RESPONSIVE PRODUCTOS TIENDA //
+@media(max-width:768px) {
+    .box__productos{
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:480px){
+      .box__productos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}

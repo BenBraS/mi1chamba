@@ -1,0 +1,71 @@
+.landpage__inicio {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". Header Header Header Header ."
+      ". Welcome Welcome Welcome Welcome ."
+      ". Welcome Welcome Welcome Welcome ."
+      ". . Tienda Tienda . .";
+      min-height: 100vh;
+      
+    background-image: url(../Images/imagenfondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:aliceblue
+}
+#main {
+  min-height: 100vh;
+}
+#header{ grid-area: Header; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: sticky;
+    padding-top: 5vw;
+    
+
+}
+
+/*============PROPIEDADES DEL NAV============*/
+
+#navBar ul li a {
+    font-size: 2vw;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+ 
+}
+
+#navBar{
+  margin-right: 9vw;
+  margin-top: 5vw;
+
+}
+#navBar ul {
+    display: flex;
+    align-items: flex-end;
+    border: solid;
+    border-radius: 10px;
+    padding-right: 40px;
+}
+
+
+
+/*================Propiedades Welcome to the best dried fruit Store========= */
+
+.Welcome { grid-area: Welcome; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-left: 10vw;
+margin-left: 4vw;
+margin-top: 5vw;
+font-family: indie Flower;
+}
+
+.Welcome h1{
+  font-size: 4vw;
+}
