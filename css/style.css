@@ -2,39 +2,21 @@
   max-width: 1440px;
 }
 
-#grid__contacto {
+.container__contacto {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  gap: 2px;
-  grid-auto-flow: row;
-  grid-template-areas: ". Navbar Navbar Navbar Navbar Navbar . ." "titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto titulo_contacto" ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ." ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ." ". formulario_contacto formulario_contacto formulario_contacto mapa__google mapa__google mapa__google ." ". . . . . . . .";
-  min-height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5%;
+  padding: 5%;
+  background-color: #9C9BAA;
+}
+
+.logo img {
+  height: 80px;
+  width: 120px;
 }
 
 /*====================TITULO Y REDES **FALTA ICONO */
-.titulo_contacto {
-  grid-area: titulo_contacto;
-  display: flex;
-  flex-direction: column;
-  padding-left: 5%;
-  color: white;
-}
-
-.caja_contactos {
-  display: flex;
-  justify-content: space-evenly;
-  color: rgb(255, 255, 255);
-  position: relative;
-  right: 20%;
-  bottom: 20%;
-  font-size: 10px;
-}
-
-.caja_contactos h2 {
-  font-size: 20px;
-}
-
 .linea_titulo {
   width: 80%;
   border: solid 3px rgb(255, 255, 255);
@@ -44,70 +26,41 @@
 
 /*FORMULARIO DE CONTACTO*/
 .form {
-  grid-area: formulario_contacto;
   background-color: #D9D9D9;
+  display: grid;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 20%;
   text-align: center;
-  max-width: 490px;
-  overflow: auto;
   padding: 1em 1em;
-}
-
-.form__container {
-  display: grid;
-  gap: 2em;
-}
-
-.form__input {
-  width: 95%;
-  min-width: 50%;
-}
-
-.form__submit {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 10%;
-  background: #d9d9d9;
-  color: #fff;
   max-width: 80%;
 }
 
-/*MAPA DE GOOGLE*/
-.mapa__google {
-  grid-area: mapa__google;
-  padding-left: 3%;
+.form__submit {
+  background: #d9d9d9;
+  color: #fff;
+  max-width: 100%;
 }
 
+/*MAPA DE GOOGLE*/
 .iframe__maps {
-  grid-area: mapa__google;
+  display: grid;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 20%;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 #mensaje {
   resize: none;
 }
 
-#body__contacto {
-  background-color: #454856;
-  min-height: 100vh;
-  display: flex;
+@media (max-width: 768px) {
+  .container__contacto {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-
-#main__contacto {
-  min-height: 100vh;
-}
-
-#header__contacto {
-  grid-area: Navbar;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  left: 20%;
-  top: 5%;
+.div_linea {
+  width: 100%;
+  height: 5px;
 }
 
 /*==============Propiedades Tienda=============== */
@@ -138,13 +91,11 @@
 }
 
 .container__tienda .div {
-  background-color: #9C9BAA;
   color: white;
   display: grid;
 }
 
 .container__tienda .div:first-child {
-  background-color: #9C9BAA;
   grid-column-start: 1;
   grid-column-end: 4;
   justify-self: stretch;
@@ -166,14 +117,12 @@
 
 .box__productos {
   display: grid;
-  background-color: #9C9BAA;
   grid-template-columns: repeat(3, 1fr);
-  padding: 10px;
+  padding: 2%;
 }
 
 .box__productos {
-  background-color: lightseagreen;
-  border: 1px solid black;
+  background-color: #9C9BAA;
 }
 
 .producto1 {
@@ -216,7 +165,6 @@
 .contenedor__productos img {
   width: 80%;
   height: auto;
-  border-radius: 20px 20px 20px 20px;
 }
 
 #body__tienda {
@@ -233,6 +181,11 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.div_linea {
+  width: 100%;
+  height: 5px;
+}
+
 /*PAGINA ACERCA DE O SOBRE NOSOTROS*/
 .contenido_sobrenosotros {
   display: grid;
@@ -263,6 +216,15 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.div_linea {
+  width: 100%;
+  height: 5px;
+}
+
+.logo img {
+  height: 50%;
+}
+
 .landpage__inicio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -271,6 +233,8 @@
   grid-auto-flow: row;
   grid-template-areas: ". Header Header Header Header ." ". Welcome Welcome Welcome Welcome ." ". Welcome Welcome Welcome Welcome ." ". . Tienda Tienda . .";
   min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url(../Images/imagenfondo.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -288,7 +252,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  position: sticky;
   padding-top: 5vw;
 }
 
