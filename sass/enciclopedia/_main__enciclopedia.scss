@@ -1,0 +1,36 @@
+.contenedor__enciclopedia{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .contenido__sobrenosotros{
+        max-width: 80%;
+    }
+    .estilos_parrafo{
+        font-size: 25px;
+        color: white;
+        
+    }
+
+}
+.barra_busqueda{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    
+    .icono_placeholder{
+        width: 50%;
+        border-radius: 15px;
+       
+    }
+}
+.img_lupa{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 2px;
+    bottom: 1px;
+    top: 3px;
+}
